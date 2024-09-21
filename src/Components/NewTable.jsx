@@ -117,13 +117,13 @@ function NewTable() {
     <div>
       <div className='sm:flex-col sm:flex sm:w-full md:flex md:flex-row items-center justify-between gap-3 border-6'>
     
-          <div className='border-2 sm:w-full   md:min-w-4/12 min-h-[330px]'>
+          <div className='border-2 sm:w-full   md:min-w-4/12 min-h-[330px] '>
           
               <Line
               data={{
                 labels: ["2020","2021","2022","2023","2024"],
                 datasets: [{
-                  label: 'My First Dataset',
+                  label: 'ML Engineer Jobs Analysis',
                   data:   mainTableData?.map(item => item.totalJobs) || [],  // Optimized data extraction
                   fill: false,
                   borderColor: 'rgb(75, 192, 192)',
@@ -134,25 +134,25 @@ function NewTable() {
           </div>  
 
           <div className='sm:w-full md:min-w-4/12  min-h-[330px]'>
-          <h2>Main Table: Total Jobs and Average Salary</h2>
+          <h2 className='font-bold bg-gray-200 text-center px-2 py-2'>Total Jobs and Average Salary (2020-2024)</h2>
 
-          <Table
-            dataSource={mainTableData}
-            columns={mainColumns}
-            pagination={false}
-            rowKey="year"
-            onRow={(record) => {
-              return {
-                onClick: () => handleRowClick(record),
-              };
-            }}
-          />
+          <div className="table-responsive">
+      <Table
+        dataSource={mainTableData}
+        columns={mainColumns}
+        pagination={false}
+        rowKey="year"
+        onRow={(record) => ({
+          onClick: () => handleRowClick(record),
+        })}
+      />
+    </div>
           </div>
       </div>
 
       {selectedYear && (
         <>
-          <h2>Job Titles for {selectedYear}</h2>
+          <h2 className='font-bold bg-gray-200 text-center px-2 py-2'>Job Titles for {selectedYear}</h2>
           <Table
             dataSource={selectedYearData}
             columns={detailColumns}

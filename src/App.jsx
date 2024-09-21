@@ -6,6 +6,7 @@ import Expandable from "./Components/Expandable"
 import JobsLineChart from "./Components/JobsLineChart"
 import LayoutPattern from './Components/LayoutPattern'
 import Chatbot from './ChatBot'
+import Navbar from './Components/NavBar'
 
 import './App.css'
 

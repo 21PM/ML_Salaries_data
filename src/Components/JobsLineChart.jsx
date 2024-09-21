@@ -38,7 +38,7 @@ function JobsLineChart() {
   }, []);
 
   return (
-    <div>
+    <div > 
       <h2>Jobs Over Time (2020 - 2024)</h2>
       <Line data={chartData} />
     </div>

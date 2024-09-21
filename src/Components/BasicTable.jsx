@@ -104,7 +104,7 @@ const BasicTable = () => {
   return (
     <div style={{ padding: '20px' }}>
       {/* Main Table */}
-      <h2>ML Engineer Salaries (2020-2024)</h2>
+      <h1>ML Engineer Salaries (2020-2024)</h1>
       <Table
         columns={mainTableColumns}
         dataSource={data}
